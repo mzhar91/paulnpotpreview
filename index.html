@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul's 'n Pot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="script.js" type="module" ></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#e86928'
+                },
+                secondary: {
+                  DEFAULT: '#f8dfbc'
+                },
+                tertiary: {
+                    blue: '#5fa8e0',
+                    green: '#a9bb91',
+                },
+                muted: {
+                    DEFAULT: '#f3f4f6',
+                    foreground: '#6b7280',
+                },
+                border: '#e5e7eb',
+              },
+            },
+          },
+        }
+      </script>
+</head>
+<body>
+    <main>
+        <section id="hero" class="py-12 md:py-24 lg:py-32">
+            <div class="content flex flex-col gap-8">
+                <img src="assets/icon/PnP-logo.png" alt="PnP Logo">
+                <div class="flex flex-col gap-6">
+                    <h4>Pilihan Tepat Untuk Jaga Imunitas dan Daya Tahan Keluarga</h4>
+                    <button id="hero-button" class="bg-primary text-white font-medium px-4 py-2 rounded-md text-2xl w-fit hover:bg-primary/80 transition-colors">Explore Our Products</button>
+                </div>
+            </div>
+        </section>
+        <section id="definition" class="flex flex-col gap-8 py-12 md:py-24 lg:py-32">
+            <div class="content">
+                <h1 class="text-primary text-[2.5rem] md:text-[4.75rem] font-bold leading-none md:leading-normal tracking-[-1px]">What is Paul's 'n Pot?</h1>
+                <p class="w-full max-w-[820px] text-2xl md:text-4xl font-normal text-justify">Bone Stock Sapi dan Ayam yang dimasak dengan waktu lama sehingga collagen yang ada pada tulang keluar sehingga hasilnya menjadi lebih kental dan jika disimpan di suhu 5°C bisa berubah jadi jelly.</p>
+                <ul class="grid gap-4 md:gap-2 py-4 mt-6 text-primary">
+                    <li class="flex items-center gap-2">
+                      <div class="w-3 h-2 md:size-2 rounded-full bg-primary"></div>
+                      <span class="text-lg md:text-2xl font-medium leading-none md:leading-normal">Membantu suplementasi nutrisi yang dibutuhkan sehari-hari</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <div class="w-3 h-2 md:size-2 rounded-full bg-primary"></div>
+                      <span class="text-lg md:text-2xl font-medium leading-none md:leading-normal">Membantu percepatan recovery ketika sedang sakit</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Laboratory Tested Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-primary/5 to-primary/10">
+            <div class="container px-4 md:px-6 mx-auto">
+            <div class="flex flex-col items-center space-y-4 text-center mb-12">
+                <div class="inline-flex items-center justify-center size-16 rounded-full bg-primary/10 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-8 text-primary">
+                    <path d="M10 2v7.31"></path>
+                    <path d="M14 9.3V2"></path>
+                    <path d="M8.5 2h7"></path>
+                    <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+                    <path d="M5.58 16.5h12.85"></path>
+                </svg>
+                </div>
+                <h2 class="text-3xl font-bold md:text-4xl text-balance">
+                Laboratory Tested & Certified
+                </h2>
+                <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-pretty">
+                    Dengan komitmen terhadap kualitas dan keamanan, kami telah melakukan uji lab produk <span class="font-semibold text-xl text-black">Paul 'n Pot</span> untuk memastikan setiap produk yang Anda terima memenuhi standar keamanan dan kesehatan.
+                </p>
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Lead Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                    <path d="m3 5 18 14"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">Lead Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">Zero lead content confirmed through atomic absorption spectroscopy</p>
+                </div>
+
+                <!-- Mercury Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <path d="M8 19h8a4 4 0 0 0 3.8-2.8 4 4 0 0 0-1.6-4.5c1-1.1 1-2.7 0-3.8-.7-.8-1.8-1.2-2.8-1a4 4 0 0 0-6.7-1.5A3.9 3.9 0 0 0 4 8.8a4 4 0 0 0 1.6 7"></path>
+                    <path d="m3 3 18 18"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">Mercury Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">No mercury detected using cold vapor atomic fluorescence spectroscopy</p>
+                </div>
+
+                <!-- Cadmium Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 14.14 14.14"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">Cadmium Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">Cadmium absence confirmed through inductively coupled plasma mass spectrometry</p>
+                </div>
+
+                <!-- Arsenic Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                    <path d="M3 3 21 21"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">Arsenic Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">Zero arsenic content verified through hydride generation atomic absorption spectrometry</p>
+                </div>
+
+                <!-- Salmonella Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <path d="M12 22a8 8 0 0 0 8-8"></path>
+                    <path d="M20 10c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8"></path>
+                    <path d="M13.73 21a8 8 0 0 0 6.27-6.27"></path>
+                    <path d="M10 10a2 2 0 0 1 4 0c0 1.5-.5 2-2 3"></path>
+                    <path d="M12 17h.01"></path>
+                    <path d="M3 3 21 21"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">Salmonella Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">Absence of Salmonella confirmed through PCR and culture-based testing methods</p>
+                </div>
+
+                <!-- Clostridium Perfringens Free -->
+                <div class="flex flex-col items-center p-6 bg-background rounded-xl shadow-sm border border-primary/40">
+                <div class="rounded-full bg-primary/10 p-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-6 text-primary">
+                    <path d="M19.45 13.11a5 5 0 1 0-5.45 5.89"></path>
+                    <path d="M15 8a5 5 0 1 0-5.11 5"></path>
+                    <path d="M12 8a5 5 0 0 0-5 5"></path>
+                    <path d="M13 14a5 5 0 0 0 4.9 4.11"></path>
+                    <path d="M3 3 21 21"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-medium mb-2">C. Perfringens Free</h3>
+                <div class="flex items-center gap-1.5 text-tertiary-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                    <span class="font-medium text-tertiary-blue">Verified</span>
+                </div>
+                <p class="text-base text-muted-foreground text-center mt-2">No Clostridium perfringens detected through anaerobic culture and molecular testing</p>
+                </div>
+            </div>
+
+            <div class="mt-16 grid gap-4 md:grid-cols-3 items-center">
+                <div class="flex flex-col items-center p-6 text-center">
+                    <img src="assets/image/test_report_1.png" alt="ISO Certified" class="mb-4 rounded-lg" />
+                    <h3 class="font-medium text-xl lg:font-bold lg:text-2xl">ISO 9001 Certified</h3>
+                    <p class="text-base text-muted-foreground">International quality management standards</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center md:border-x border-primary/40">
+                    <img src="assets/image/test_report_2.png" alt="Laboratory Tested" class="mb-4 rounded-lg" />
+                    <h3 class="font-medium text-xl lg:font-bold lg:text-2xl">Independently Tested</h3>
+                    <p class="text-base text-muted-foreground">Verified by leading research laboratories</p>
+                </div>
+                <div class="flex flex-col items-center p-6 text-center">
+                    <img src="assets/image/test_report_3.png" alt="Eco Certified" class="mb-4 rounded-lg" />
+                    <h3 class="font-medium text-xl lg:font-bold lg:text-2xl">Eco-Friendly Certified</h3>
+                    <p class="text-base text-muted-foreground">Meets strict environmental sustainability criteria</p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="products" class="flex justify-center">
+            <div class="content flex flex-col items-center">
+                <h1>Our Product</h1>
+                <div class="product-list">
+                    <div class="product p-2 md:p-6 rounded-xl bg-card text-card-foreground shadow-md lg:w-1/3 h-fit hover:shadow-lg overflow-hidden transition-all hover:shadow-lg">
+                        <div class="relative">
+                            <img src="assets/image/Chicken 1.png" alt="Chicken">
+                            
+                            <img src="assets/image/sterile_blue.PNG" alt="Sterile" class="absolute -bottom-2 -right-2 md:-bottom-6 md:-right-6 w-10 h-10 md:w-20 md:h-20">
+                        </div>
+                        <a href="https://shopee.co.id/paulnpot?categoryId=100629&entryPoint=ShopByPDP&itemId=20173967642" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-2xl hover:bg-primary/80 transition-colors">
+                            <img src="assets/icon/shopping-cart.svg" alt="shopping-cart" class="w-4 h-4 md:w-6 md:h-6">
+                            <span class="font-medium text-sm md:text-xl">Buy Now</span>
+                        </a>
+                    </div>
+                    <div class="product p-2 md:p-6 rounded-xl bg-card text-card-foreground shadow-md lg:w-1/3 h-fit hover:shadow-lg overflow-hidden transition-all hover:shadow-lg">
+                        <div class="relative">
+                            <img src="assets/image/Beef.png" alt="Beef">
+                            <img src="assets/image/sterile_orange.PNG" alt="Sterile" class="absolute -bottom-2 -right-2 md:-bottom-6 md:-right-6 w-10 h-10 md:w-20 md:h-20">
+                        </div>
+                        <a href="https://shopee.co.id/paulnpot?categoryId=100629&entryPoint=ShopByPDP&itemId=20173967642" target="_blank" class="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg text-2xl hover:bg-primary/80 transition-colors">
+                            <img src="assets/icon/shopping-cart.svg" alt="shopping-cart" class="w-4 h-4 md:w-6 md:h-6">
+                            <span class="font-medium text-sm md:text-xl">Buy Now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Carousel Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+            <div class="container px-4 md:px-6 mx-auto">
+            <div class="flex flex-col items-center space-y-4 text-center mb-10">
+                <h2 class="text-3xl font-bold tracking-tighter md:text-4xl text-primary">
+                    What They Say About Paul 'n Pot
+                </h2>
+                <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-muted">
+                    Jangan hanya percaya kata-kata kami - dengarkan langsung dari pelanggan kami yang puas.
+                </p>
+            </div>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="overflow-hidden rounded-xl bg-background p-8 shadow-lg bg-white">
+                <div id="testimonials-container" class="relative h-[250px] sm:h-[200px]"></div>
+                <div id="testimonial-dots" class="flex justify-center gap-2 mt-6"></div>
+                <button id="prev-testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 size-10 flex items-center justify-center rounded-full bg-white shadow-lg border border-border hover:bg-muted transition-colors sm:-translate-x-5" aria-label="Previous testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="m15 18-6-6 6-6"></path>
+                </svg>
+                </button>
+                <button id="next-testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 size-10 flex items-center justify-center rounded-full bg-white shadow-lg border border-border hover:bg-muted transition-colors sm:translate-x-5" aria-label="Next testimonial">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5">
+                    <path d="m9 18 6-6-6-6"></path>
+                </svg>
+                </button>
+            </div>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section id="about-us" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/50">
+            <div class="container px-4 md:px-6 mx-auto">
+            <div class="grid gap-10 lg:grid-cols-2 items-center">
+                <div class="space-y-6">
+                <div class="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
+                    About Us
+                </div>
+                <h2 class="text-3xl font-bold tracking-[-1px] md:text-4xl text-balance">
+                    Experience the natural power of collagen with Paul 'n pot
+                </h2>
+                <p class="text-muted-foreground md:text-lg text-pretty">
+                    Di Paul 'n pot, kami mengkhususkan diri dalam membuat <span class="font-medium">Collagen Chicken Bone Stock</span> dan <span class="font-medium">Collagen Jelly</span> premium, yang terbuat dari bahan-bahan terbaik untuk memberi nutrisi pada tubuh Anda secara alami. Kaldu tulang kami dimasak dengan perlahan hingga sempurna, mengekstrak kolagen dari tulang ayam, kaki ayam, dan daging—menciptakan kaldu kaya yang mengental secara alami dan berubah menjadi jelly saat didinginkan.
+                </p>
+                
+                <div class="pt-4">
+                    <h3 class="text-xl font-medium mb-4">Connect With Us</h3>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                    <!-- Instagram Contact -->
+                    <a href="https://www.instagram.com/paulnpot" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-lg border border-border bg-background hover:bg-muted transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 text-pink-500">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                        <span class="font-medium">Follow Instagram Kami</span>
+                    </a>
+                    
+                    <!-- WhatsApp Contact -->
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-3 rounded-lg border border-border bg-background hover:bg-muted transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-5 text-green-500">
+                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"></path>
+                        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+                        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z"></path>
+                        <path d="M9.5 13.5c.5 1 1.5 1 2 1s1.5 0 2-1"></path>
+                        </svg>
+                        <span class="font-medium">Hubungi WhatsApp Kami</span>
+                    </a>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="relative">
+                <div class="relative overflow-hidden rounded-xl bg-background shadow-lg border border-border">
+                    <div class="aspect-[4/3] w-full">
+                    <img 
+                        src="assets/image/highlight.jpg" 
+                        alt="Our team at work" 
+                        class="object-cover w-full h-full"
+                    />
+                    </div>
+                    <!-- <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Our Mission</h3>
+                    <p class="text-muted-foreground">To create innovative products that improve lives while respecting our planet and communities.</p>
+                    <div class="flex items-center gap-4 mt-4">
+                        <div class="flex -space-x-2">
+                        <img src="https://placehold.co/100x100" alt="Team member" class="size-10 rounded-full border-2 border-background" />
+                        <img src="https://placehold.co/100x100" alt="Team member" class="size-10 rounded-full border-2 border-background" />
+                        <img src="https://placehold.co/100x100" alt="Team member" class="size-10 rounded-full border-2 border-background" />
+                        </div>
+                        <span class="text-sm text-muted-foreground">Our dedicated team of experts</span>
+                    </div>
+                    </div> -->
+                </div>
+                
+                <div class="absolute -z-10 size-[300px] rounded-full bg-primary/10 -bottom-20 -left-20 blur-3xl"></div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
