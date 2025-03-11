@@ -5,40 +5,86 @@ document.querySelector('#hero button').addEventListener('click', () => {
     });
 });
 
+const whatsappMessageTemplates = {
+    ayam: {
+        satuan: "Halo, saya ingin membeli satuan Chicken Bone Stock",
+        "5plus1": "Halo, saya ingin membeli paket 5+1 Chicken Bone Stock",
+        "12plus2": "Halo, saya ingin membeli paket 12+2 Chicken Bone Stock"
+    },
+    sapi: {
+        satuan: "Halo, saya ingin membeli satuan Beef Bone Stock",
+        "5plus1": "Halo, saya ingin membeli paket 5+1 Beef Bone Stock",
+        "12plus2": "Halo, saya ingin membeli paket 12+2 Beef Bone Stock"
+    }
+};
+
+const whatsappNumber = "628561060045";
+
+let selectedAyamPackage = null;
+let selectedSapiPackage = null;
+const groupAyam = document.querySelector('#group-ayam');
+
+groupAyam.addEventListener('change', (e) => {
+    selectedAyamPackage = e.target.value;
+});
+
+const groupSapi = document.querySelector('#group-sapi');
+
+groupSapi.addEventListener('change', (e) => {
+    selectedSapiPackage = e.target.value;
+});
+
+const buyNowAyam = document.querySelector('#buy-now-ayam');
+const buyNowSapi = document.querySelector('#buy-now-sapi');
+
+buyNowAyam.addEventListener('click', () => {
+  const message = encodeURIComponent(whatsappMessageTemplates.ayam?.[selectedAyamPackage] ?? whatsappMessageTemplates?.ayam.satuan);
+  window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+});
+
+buyNowSapi.addEventListener('click', () => {
+  const message = encodeURIComponent(whatsappMessageTemplates.sapi?.[selectedSapiPackage] ?? whatsappMessageTemplates.sapi.satuan);
+  window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+});
+
+
 
 // Testimonials data
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Marketing Director",
-    content: "This product has completely transformed our workflow. The quality is exceptional and the customer service is top-notch. Highly recommended!",
+    name: "Marian Adrianna",
+    content: "kakk Paul n Pot nya suka bgttt, anakku lahap bgtt yayy",
     rating: 5,
-    avatar: "https://placehold.co/60x60"
+    avatar: "assets/icon/female_icon.png"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Tech Entrepreneur",
-    content: "I've tried many similar products, but this one stands out for its durability and thoughtful design. Worth every penny.",
+    name: "Marian Adrianna",
+    content: "Anakku kemarin lagi bali belly sampe turun 500g, akhirnya mau makan pake kaldu inii hu seneng bgt <span class='font-normal'>&#129402&#129392</span> thank youuuu udh bikin product yg super nutritious DAN BISA DIKIRIM NON FROZEN<span class='font-normal'>&#129402</span>",
     rating: 5,
-    avatar: "https://placehold.co/60x60"
+    avatar: "assets/icon/female_icon.png"
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Product Designer",
-    content: "The attention to detail is impressive. This product has exceeded my expectations in every way possible.",
-    rating: 4,
-    avatar: "https://placehold.co/60x60"
+    name: "Aulia Mahiranissa",
+    content: "..honest review, anakku udah sebulanan ku kasih Beef Stock 50ml doang sehari dijadiin sup telur gitu. BB nya naik 600gr dong <span class='font-normal'>&#128514</span>, mantep bgt haha...",
+    rating: 5,
+    avatar: "assets/icon/female_icon.png"
   },
   {
     id: 4,
-    name: "David Kim",
-    role: "Operations Manager",
-    content: "We've implemented this across our entire department and seen immediate improvements in efficiency. A game-changer for our business.",
+    name: "Anonim",
+    content: "Anakku kita tinggal 15 hari ke Jepang, setiap hari ga skip aku beliin Chicken Broth Paul n Pot, dia doyan bgt selalu habis... topcer ini hahahah",
     rating: 5,
-    avatar: "https://placehold.co/60x60"
+    avatar: "assets/icon/female_icon.png"
+  },
+  {
+    id: 5,
+    name: "Aulia Mahiranissa",
+    content: "...Sebelumnya emang udh konsumsi suplemen zinc untuk bantu penyerapan, tapi ga signifikan dan bikin sering alergi pilek anaknya. Ku cobain Beef Stock lah mana dia suka bgt...",
+    rating: 5,
+    avatar: "assets/icon/female_icon.png"
   }
 ];
 
@@ -50,7 +96,6 @@ function renderTestimonials() {
   const container = document.getElementById('testimonials-container');
   const dotsContainer = document.getElementById('testimonial-dots');
   
-  // Clear containers
   container.innerHTML = '';
   dotsContainer.innerHTML = '';
   
@@ -75,25 +120,25 @@ function renderTestimonials() {
       <div class="flex items-center justify-center mb-4">
         ${starsHtml}
       </div>
-      <p class="text-lg italic mb-6">"${testimonial.content}"</p>
-      <div class="flex items-center mt-auto">
+      <p class="text-sm md:text-lg italic mb-6">"${testimonial.content}"</p>
+      <div class="flex items-center mt-8 md:mt-auto">
         <img
           src="${testimonial.avatar}"
           alt="${testimonial.name}"
-          class="w-[60px] h-[60px] rounded-full mr-4"
+          class="w-[40px] h-[40px] rounded-full mr-4 border border-border border-2"
         />
         <div class="text-left">
-          <h4 class="font-semibold">${testimonial.name}</h4>
-          <p class="text-sm text-muted-foreground">${testimonial.role}</p>
+          <h4 class="font-semibold text-sm md:text-lg">${testimonial.name}</h4>
         </div>
       </div>
+      <a class="opacity-10 mt-2 text-[12px]" href="https://www.freepik.com/icon/people_15675842#fromView=keyword&page=1&position=68&uuid=149517da-5c5b-41df-9e09-0bf0511beffe" target="_blank" rel="noopener noreferrer">Icon by Studio MRPOR</a>
     `;
     
     container.appendChild(testimonialElement);
     
     // Create dot for this testimonial
     const dot = document.createElement('button');
-    dot.className = `size-2.5 rounded-full transition-colors ${
+    dot.className = `size-2 md:size-2.5 rounded-full transition-colors ${
       index === currentTestimonial ? "bg-tertiary-green" : "bg-muted-foreground/30"
     }`;
     dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
