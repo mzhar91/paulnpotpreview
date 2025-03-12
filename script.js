@@ -53,21 +53,21 @@ buyNowSapi.addEventListener('click', () => {
 const testimonials = [
   {
     id: 1,
-    name: "Marian Adrianna",
+    name: "Marian A.",
     content: "kakk Paul n Pot nya suka bgttt, anakku lahap bgtt yayy",
     rating: 5,
     avatar: "assets/icon/female_icon.png"
   },
   {
     id: 2,
-    name: "Marian Adrianna",
+    name: "Marian A.",
     content: "Anakku kemarin lagi bali belly sampe turun 500g, akhirnya mau makan pake kaldu inii hu seneng bgt <span class='font-normal'>&#129402&#129392</span> thank youuuu udh bikin product yg super nutritious DAN BISA DIKIRIM NON FROZEN<span class='font-normal'>&#129402</span>",
     rating: 5,
     avatar: "assets/icon/female_icon.png"
   },
   {
     id: 3,
-    name: "Aulia Mahiranissa",
+    name: "Aulia M.",
     content: "..honest review, anakku udah sebulanan ku kasih Beef Stock 50ml doang sehari dijadiin sup telur gitu. BB nya naik 600gr dong <span class='font-normal'>&#128514</span>, mantep bgt haha...",
     rating: 5,
     avatar: "assets/icon/female_icon.png"
@@ -81,7 +81,7 @@ const testimonials = [
   },
   {
     id: 5,
-    name: "Aulia Mahiranissa",
+    name: "Aulia M.",
     content: "...Sebelumnya emang udh konsumsi suplemen zinc untuk bantu penyerapan, tapi ga signifikan dan bikin sering alergi pilek anaknya. Ku cobain Beef Stock lah mana dia suka bgt...",
     rating: 5,
     avatar: "assets/icon/female_icon.png"
@@ -178,3 +178,55 @@ document.getElementById('prev-testimonial').addEventListener('click', prevTestim
 
 renderTestimonials();
 resetInterval();
+
+// About Us Carousel
+let currentAboutSlide = 0;
+const aboutItems = document.querySelectorAll('.about-carousel-item');
+const aboutDots = document.querySelectorAll('.about-carousel-dot');
+
+function showAboutSlide(index) {
+  // Hide all slides
+  aboutItems.forEach(item => {
+    item.style.opacity = '0';
+  });
+  
+  // Show the selected slide
+  aboutItems[index].style.opacity = '1';
+
+  aboutDots.forEach(dot => {
+    dot.classList.remove('active');
+    dot.classList.add('bg-white/50');
+    dot.classList.remove('bg-white');
+  });
+  
+  aboutDots[index].classList.add('active');
+  aboutDots[index].classList.add('bg-white');
+  aboutDots[index].classList.remove('bg-white/50');
+  
+  currentAboutSlide = index;
+}
+
+function nextAboutSlide() {
+  let nextIndex = currentAboutSlide + 1;
+  if (nextIndex >= aboutItems.length) {
+    nextIndex = 0;
+  }
+  showAboutSlide(nextIndex);
+}
+
+function prevAboutSlide() {
+  let prevIndex = currentAboutSlide - 1;
+  if (prevIndex < 0) {
+    prevIndex = aboutItems.length - 1;
+  }
+  showAboutSlide(prevIndex);
+}
+
+document.getElementById('next-about').addEventListener('click', nextAboutSlide);
+document.getElementById('prev-about').addEventListener('click', prevAboutSlide);
+
+aboutDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    showAboutSlide(index);
+  });
+});

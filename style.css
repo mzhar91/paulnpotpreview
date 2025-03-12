@@ -140,3 +140,7 @@ select {
     -moz-appearance: none;
     appearance: none;
 }
+
+.about-carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
